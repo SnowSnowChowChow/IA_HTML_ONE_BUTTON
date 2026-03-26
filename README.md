@@ -1,6 +1,6 @@
-# 🤖 Assistant IA Local — 100% navigateur, zéro serveur
+# 🤖 Local AI Assistant — 100% in-browser, zero server
 
-Un assistant IA conversationnel qui tourne **entièrement dans votre navigateur**, sans installation, sans GPU dédié et sans envoyer la moindre donnée à l'extérieur.
+A conversational AI assistant that runs **entirely in your browser** — no installation, no dedicated GPU, and no data ever leaves your machine.
 
 [![Made with WebGPU](https://img.shields.io/badge/WebGPU-enabled-blue)](https://developer.chrome.com/docs/web-platform/webgpu)
 [![No server](https://img.shields.io/badge/backend-none-green)]()
@@ -8,81 +8,81 @@ Un assistant IA conversationnel qui tourne **entièrement dans votre navigateur*
 
 ---
 
-## ✨ Fonctionnalités
+## ✨ Features
 
-- 💬 **Chat IA** — Conversations fluides avec un LLM (Qwen2.5-1.5B) tournant localement via WebLLM
-- 📎 **Analyse de documents** — Chargez un PDF, Word, Excel, image ou fichier texte pour l'analyser directement
-- 🧠 **Mémoire vectorielle (RAG)** — Indexez des documents en local et interrogez-les via un mode "Focus"
-- 🎤 **Dictée vocale** — Saisie par micro (Web Speech API)
-- 🔊 **Lecture à voix haute** — Synthèse vocale des réponses
-- 🌙 **Thème clair / sombre**
-- 💾 **Historique des sessions** — Sauvegardé dans le `localStorage`
-- 📤 **Export des conversations** en `.txt`
-- ⚡ **Actions magiques** — Résumé, correction, reformulation, analyse critique en un clic
+- 💬 **AI Chat** — Fluid conversations powered by a LLM (Qwen2.5-1.5B) running locally via WebLLM
+- 📎 **Document analysis** — Upload a PDF, Word, Excel, image or text file and query it directly
+- 🧠 **Vector memory (RAG)** — Index documents locally and interrogate them with a dedicated "Focus" mode
+- 🎤 **Voice input** — Dictation via microphone (Web Speech API)
+- 🔊 **Text-to-speech** — AI responses read aloud
+- 🌙 **Light / dark theme**
+- 💾 **Session history** — Persisted in `localStorage`
+- 📤 **Export conversations** as `.txt`
+- ⚡ **Magic actions** — One-click summarize, correct, rewrite, or critically analyze any text
 
 ---
 
-## 🛠️ Technologies
+## 🛠️ Tech stack
 
-| Composant | Technologie |
+| Component | Technology |
 |---|---|
-| Modèle LLM | [WebLLM](https://webllm.mlc.ai/) — Qwen2.5-1.5B-Instruct (q4f16) |
-| Accélération | WebGPU (natif navigateur) |
-| Embeddings RAG | Transformers.js |
+| LLM engine | [WebLLM](https://webllm.mlc.ai/) — Qwen2.5-1.5B-Instruct (q4f16) |
+| Acceleration | WebGPU (native browser API) |
+| RAG embeddings | Transformers.js |
 | OCR | Tesseract.js |
-| Lecture PDF | PDF.js |
-| Lecture Word | Mammoth.js |
-| Lecture Excel | SheetJS |
-| Rendu Markdown | Marked.js |
-| Sécurité HTML | DOMPurify |
+| PDF parsing | PDF.js |
+| Word parsing | Mammoth.js |
+| Excel parsing | SheetJS |
+| Markdown rendering | Marked.js |
+| HTML sanitization | DOMPurify |
 
 ---
 
-## 🚀 Utilisation
+## 🚀 Getting started
 
-Aucune installation requise. Il suffit d'ouvrir le fichier `index.html` dans un navigateur compatible.
+No installation needed. Just open `index.html` in a supported browser.
 
 ```bash
-# Option 1 — Ouvrir directement
+# Option 1 — Open directly
 open index.html
 
-# Option 2 — Servir localement (recommandé pour les performances)
+# Option 2 — Serve locally (recommended for best performance)
 npx serve .
-# ou
+# or
 python -m http.server 8080
 ```
 
-> **Note :** Un serveur local est recommandé car certains navigateurs bloquent les ressources WebGPU sur les URL `file://`.
+> **Note:** A local server is recommended as some browsers restrict WebGPU access on `file://` URLs.
 
 ---
 
-## ✅ Compatibilité
+## ✅ Browser compatibility
 
-| Navigateur | Support |
+| Browser | Support |
 |---|---|
-| Chrome / Chromium 113+ | ✅ Complet |
-| Edge 113+ | ✅ Complet |
-| Firefox | ❌ WebGPU non supporté |
-| Safari (macOS 14+) | ⚠️ Partiel |
+| Chrome / Chromium 113+ | ✅ Full |
+| Edge 113+ | ✅ Full |
+| Firefox | ❌ WebGPU not supported |
+| Safari (macOS 14+) | ⚠️ Partial |
 
 ---
 
-## 📦 Structure
+## 📦 Project structure
 
 ```
-index.html   ← Tout le projet tient en un seul fichier
+index.html   ← The entire project in a single file
 ```
 
-Aucune dépendance locale. Toutes les bibliothèques sont chargées depuis des CDN publics.
+No local dependencies. All libraries are loaded from public CDNs.
 
 ---
 
-## 🔒 Confidentialité
+## 🔒 Privacy
 
-Toutes les données (conversations, documents, embeddings) restent **exclusivement sur votre machine**. Aucune donnée n'est transmise à un serveur externe. Le modèle est téléchargé une seule fois puis mis en cache par le navigateur.
+All data — conversations, documents, and embeddings — stays **exclusively on your machine**. Nothing is ever sent to an external server. The model is downloaded once and then cached by the browser for offline use.
 
 ---
 
-## 📄 Licence
+## 📄 License
 
-MIT — libre d'utilisation, de modification et de distribution.
+MIT — free to use, modify and distribute.
